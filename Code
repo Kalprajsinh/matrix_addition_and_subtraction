@@ -1,0 +1,61 @@
+#include<stdio.h>   
+void main()  
+{  
+int a,m, n, c, d,x[10][10],y[10][10],z[10][10];  
+    printf("Enter the number of rows: ");  
+    scanf("%d", & m);  
+    printf("Enter the number of columns: ");  
+    scanf("%d", & n);  
+    printf("\n");
+    printf("Enter the elements of first matrix\n");  
+    for (c = 0; c < m; c++)  
+    for (d = 0; d < n; d++)
+     {
+        printf("\nx[%d][%d]:",c,d);
+        scanf("%d", & x[c][d]); 
+     }
+    printf("\n");
+    printf("Enter the elements of second matrix\n");  
+    for (c = 0; c < m; c++)  
+    for (d = 0; d < n; d++) 
+     {
+        printf("\nx[%d][%d]:",c,d);
+        scanf("%d", & y[c][d]);  
+     }
+      
+    {  
+    printf("\n");
+    printf("for addition enter 1\n");
+    printf("for subtraction enter 2\n");
+    scanf("%d",&a);
+    switch(a)
+    {
+     case 1:
+      printf("Sum of entered matrices:-\n\n");
+        for (c = 0; c < m; c++)
+        {
+        for (d = 0; d < n; d++)  
+        {  
+            z[c][d] = x[c][d] + y[c][d];  
+            printf("%d\t", z[c][d]);  
+        }  
+        printf("\n");  
+        }
+    
+     break;
+     case 2:
+       printf("subtraction of entered matrices:-\n\n");
+        for (c = 0; c < m; c++)
+        {
+        for (d = 0; d < n; d++)  
+        {  
+            z[c][d] = x[c][d] - y[c][d];  
+            printf("%d\t", z[c][d]);  
+        }  
+        printf("\n");  
+        }
+     break;
+    }
+    }  
+    
+}  
